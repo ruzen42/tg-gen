@@ -7,8 +7,8 @@ import (
 )
 
 func TestChain(t *testing.T) {
-	chain := NewMChain(4)
-	data, err := os.ReadFile("export.txt")
+	chain := NewMChain(10)
+	data, err := os.ReadFile("export_am4.txt")
 	
 	if err != nil {
 		return
@@ -18,5 +18,5 @@ func TestChain(t *testing.T) {
 
 	fmt.Println(chain.Generate(10))
 	
-	chain.Save("../bin/slackware.gob")
+	chain.Save("../bin/am4_10.gob")
 }
